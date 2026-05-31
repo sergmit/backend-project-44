@@ -5,7 +5,6 @@ class BrainGcdApp extends App{
 
     start() {
         console.log('Find the greatest common divisor of given numbers.');
-        let isWin = false;
 
         for (let i = 1; i <= BrainGcdApp.countAttempts; i++) {
             const firstNumber = Math.round(Math.random() * 100);

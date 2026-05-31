@@ -6,7 +6,6 @@ class BrainCalcApp extends App{
 
     start() {
         console.log('What is the result of the expression?');
-        let isWin = false;
 
         for (let i = 1; i <= BrainCalcApp.countAttempts; i++) {
             const firstNumber = Math.round(Math.random() * 100);

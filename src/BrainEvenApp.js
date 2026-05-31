@@ -5,8 +5,6 @@ class BrainEvenApp extends App {
     start() {
         console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
-        let isWin = false;
-
         for (let i = 1; i <= BrainEvenApp.countAttempts; i++) {
             const number = Math.round(Math.random() * 100);
             const isEven = number % 2 === 0;
