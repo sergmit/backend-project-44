@@ -11,6 +11,7 @@
     brain-calc
     brain-even
     brain-gcd
+    brain-progression
 
 ## Brain GCD Game
 ```Bash
@@ -36,5 +37,52 @@ Congratulations, Sam!
 Question: 25 50
 Your answer: 1
 '1' is wrong answer ;(. Correct answer was '25'.
+Let's try again, Sam!
+```
+
+## Brain Progression
+```bash
+brain-progression
+```
+```bash
+Welcome to the Brain Games!
+May I have your name? Sam
+Hello, Sam!
+What number is missing in the progression?
+Question: 5 7 9 11 13 .. 17 19 21 23
+Your answer: 15
+Correct!
+Question: 2 5 8 .. 14 17 20 23 26 29
+Your answer: 11
+Correct!
+Question: 14 19 24 29 34 39 44 49 54 ..
+Your answer: 59
+Correct!
+Congratulations, Sam!
+```
+```bash
+Question: 5 7 9 11 13 .. 17 19 21 23
+Your answer: 1
+'1' is wrong answer ;(. Correct answer was '15'.
+Let's try again, Sam!
+```
+
+## Prime App
+```bash
+brain-prime
+```
+```bash
+Welcome to the Brain Games!
+May I have your name? Sam
+Hello, Sam!
+Answer "yes" if given number is prime. Otherwise answer "no".
+Question: 7
+Your answer: yes
+Correct!
+```
+```bash
+Question: 55
+Your answer: no
+'no' is wrong answer ;(. Correct answer was 'yes'.
 Let's try again, Sam!
 ```
