@@ -1,2 +1,13 @@
-### Hexlet tests and linter status:
-[![Actions Status](https://github.com/sergmit/backend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/sergmit/backend-project-44/actions)
+# Brain games
+
+## Commands
+    - make ci
+    - make lint
+    - make publish
+    - npm link
+
+## Start game
+
+    brain-calc
+    brain-even
+    brain-gcd
