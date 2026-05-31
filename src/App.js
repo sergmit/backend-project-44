@@ -11,7 +11,7 @@ class App {
     init() {
         console.log('Welcome to the Brain Games!');
         this.userName = readlineSync.question('May I have your name? ');
-        console.log('Hello ' + this.userName + '!');
+        console.log('Hello, ' + this.userName + '!');
     }
 
     start() {
