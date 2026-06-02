@@ -88,7 +88,7 @@ const generateGcdCollection = () => {
   for (let i = 0; i < 3; i++) {
     const firstNumber = Math.round(Math.random() * 100)
     const secondNumber = Math.round(Math.random() * 100)
-    res.push({ question: `Question: ${firstNumber} ${secondNumber}`, answer: gcdRecursive(firstNumber, secondNumber) })
+    res.push({ question: `Question: ${firstNumber} ${secondNumber}`, answer: '' + gcdRecursive(firstNumber, secondNumber) })
   }
 
   return res
