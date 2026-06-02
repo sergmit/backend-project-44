@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import BrainGcdApp from "../src/BrainGcdApp.js";
+import { createGame, GameType } from '../src/cli.js'
 
-const app = new BrainGcdApp();
-app.start();
+const game = createGame(GameType.BrainGcd)
+game.start()

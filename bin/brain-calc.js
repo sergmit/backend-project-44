@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import BrainCalcApp from "../src/BrainCalcApp.js";
+import { createGame, GameType } from '../src/cli.js'
 
-const app = new BrainCalcApp();
-app.start();
+const app = createGame(GameType.BrainCalc)
+app.start()

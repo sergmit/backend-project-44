@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import BrainPrimeApp from "../src/BrainPrimeApp.js";
+import { createGame, GameType } from '../src/cli.js'
 
-const app = new BrainPrimeApp();
-app.start();
+const game = createGame(GameType.BrainPrime)
+game.start()

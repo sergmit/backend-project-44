@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import BrainProgressionApp from "../src/BrainProgressionApp.js";
+import { createGame, GameType } from '../src/cli.js'
 
-const app = new BrainProgressionApp();
-app.start();
+const game = createGame(GameType.BrainProgression)
+game.start()

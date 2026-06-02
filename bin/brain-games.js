@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
-import { run } from "../src/cli.js";
+import { createGame } from '../src/cli.js'
 
-run();
+const game = createGame()
+game.start()

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-import BrainEvenApp from "../src/BrainEvenApp.js";
 
-const app = new BrainEvenApp()
+import { createGame, GameType } from '../src/cli.js'
 
-app.start();
+const app = createGame(GameType.BrainEven)
+app.start()
