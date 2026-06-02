@@ -109,7 +109,7 @@ const generateProgressionCollection = () => {
     const hideNumber = Math.floor(Math.random() * numbers.length)
     const answer = numbers[hideNumber]
     numbers[hideNumber] = '..'
-    res.push({ question: `Question: ${numbers.join(' ')}`, answer })
+    res.push({ question: `Question: ${numbers.join(' ')}`, answer: '' + answer })
   }
 
   return res
