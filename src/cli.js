@@ -1,4 +1,9 @@
 import readlineSync from 'readline-sync'
+import { generateBrainCalc } from './brainCalc.js'
+import { generateEvenCollection } from './brainEven.js'
+import { generatePrimeCollection } from './brainPrime.js'
+import { generateGcdCollection } from './brainGcd.js'
+import { generateProgressionCollection } from './brainProgression.js'
 
 export const GameType = {
   BrianGame: 'BrianGame',
@@ -60,96 +65,6 @@ const greeting = () => {
   return userName
 }
 
-const generateEvenCollection = () => {
-  const res = []
-  for (let i = 0; i < 3; i++) {
-    const number = Math.round(Math.random() * 100)
-    const isEven = number % 2 === 0
-    res.push({ question: `Question: ${number}`, answer: isEven ? 'yes' : 'no' })
-  }
-
-  return res
-}
-
-const generatePrimeCollection = () => {
-  const res = []
-
-  for (let i = 0; i < 3; i++) {
-    const number = Math.round(Math.random() * 100)
-    res.push({ question: `Question: ${number}`, answer: isPrime(number) ? 'yes' : 'no' })
-  }
-
-  return res
-}
-
-const generateGcdCollection = () => {
-  const res = []
-
-  for (let i = 0; i < 3; i++) {
-    const firstNumber = Math.round(Math.random() * 100)
-    const secondNumber = Math.round(Math.random() * 100)
-    res.push({ question: `Question: ${firstNumber} ${secondNumber}`, answer: '' + gcdRecursive(firstNumber, secondNumber) })
-  }
-
-  return res
-}
-
-const generateProgressionCollection = () => {
-  const res = []
-
-  for (let i = 0; i < 3; i++) {
-    const length = Math.floor(Math.random() * 6) + 5
-    let start = Math.floor(Math.random() * 50) + 1
-    const step = Math.floor(Math.random() * 5) + 1
-    const numbers = [start]
-    for (let i = 1; i < length; i++) {
-      start += step
-      numbers.push(start)
-    }
-    const hideNumber = Math.floor(Math.random() * numbers.length)
-    const answer = numbers[hideNumber]
-    numbers[hideNumber] = '..'
-    res.push({ question: `Question: ${numbers.join(' ')}`, answer: '' + answer })
-  }
-
-  return res
-}
-
-const generateBrainCalc = () => {
-  const res = []
-  const operations = ['+', '-', '*']
-
-  for (let i = 0; i < 3; i++) {
-    const firstNumber = Math.round(Math.random() * 100)
-    const secondNumber = Math.round(Math.random() * 100)
-    const operation = operations[Math.floor(Math.random() * 3)]
-    let answer = null
-    switch (operation) {
-      case '+':
-        answer = firstNumber + secondNumber
-        break
-      case '-':
-        answer = firstNumber - secondNumber
-        break
-      case '*':
-        answer = firstNumber * secondNumber
-        break
-    }
-
-    res.push({ question: `Question: ${firstNumber} ${operation} ${secondNumber}`, answer: '' + answer })
-  }
-
-  return res
-}
-
-const isPrime = (num) => {
-  for (let i = 2; i < num; i++) {
-    if (num % i === 0) return false
-  }
-
-  return true
-}
-
 const printFailedMsg = (failedAnswer, correctAnswer) => {
   console.log(`'${failedAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`)
 }
@@ -161,14 +76,6 @@ const printFinishMsg = (isWin, userName) => {
   else {
     console.log(`Let's try again, ${userName}!`)
   }
-}
-
-const gcdRecursive = (a, b) => {
-  a = Math.abs(a)
-  b = Math.abs(b)
-
-  if (b === 0) return a
-  return gcdRecursive(b, a % b)
 }
 
 const printGameTitle = (game) => {
